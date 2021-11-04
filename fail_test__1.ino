@@ -19,17 +19,24 @@ strip.setBrightness(50);
 
 void loop() {
   // put your main code here, to run repeatedly:
- colorDaddy(strip.Color(0, 0, 255), 50);
+ //colorWipe(strip.Color(0, 0, 255), 50);
+ somthig();
 
   
 
 }
                        
+  
+
+void colorWipe(uint32_t color, int wait){ 
+  for(int i=1; i<strip.numPixels();i) {
+      strip.setPixelColor(i, color);
+      strip.show();
+      
   }
 }
-void colorDaddy(uint32_t color, int wait){ 
- for(int i=0; i<strip.numPixels();
-strip.setPixelColor(i,color);
-strip.show();
 
+void somthig() {
+  strip.setPixelColor(1,strip.Color(0,255,0));
+  strip.show();
 }
